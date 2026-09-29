@@ -3,6 +3,18 @@
 /* =========================
 VARIABLES
 ========================= */
+.project-video {
+  width: 315px;
+  height: 560px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 .short-container {
   width: 315px;
   aspect-ratio: 9 / 16;

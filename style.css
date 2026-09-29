@@ -246,51 +246,58 @@ h2 {
 
 
 /* =========================
-   PROJECT GRID
+   PROJECTS
 ========================= */
 
 /*
-   DESKTOP
+   FLEXBOX IS USED HERE.
 
    5 VIDEOS:
 
-        1       2       3
+          1     2     3
 
-           4       5
+            4     5
 
 
    6 VIDEOS:
 
-        1       2       3
+          1     2     3
 
-        4       5       6
+          4     5     6
+
+   The last row automatically centers.
 */
 
 .projects {
-  display: grid;
+  display: flex;
 
-  grid-template-columns: repeat(3, 315px);
+  flex-wrap: wrap;
 
   justify-content: center;
 
+  align-items: flex-start;
+
   gap: 60px 24px;
 
-  align-items: start;
+  width: 100%;
 }
 
 
 /* =========================
-   PROJECT
+   PROJECT CARD
 ========================= */
 
 .project {
   width: 315px;
+
+  flex: 0 0 315px;
+
   min-width: 0;
 }
 
 
 /* =========================
-   YOUTUBE SHORT VIDEO
+   YOUTUBE SHORT
 ========================= */
 
 .project-video {
@@ -470,10 +477,6 @@ footer {
 @media (max-width: 1100px) {
 
   .projects {
-    grid-template-columns: repeat(2, 315px);
-
-    justify-content: center;
-
     gap: 50px 24px;
   }
 
@@ -545,18 +548,20 @@ footer {
   }
 
 
-  /* PROJECTS */
+  /* VIDEOS */
 
   .projects {
-    grid-template-columns: 315px;
+    flex-direction: column;
 
-    justify-content: center;
+    align-items: center;
 
     gap: 50px;
   }
 
   .project {
     width: 315px;
+
+    flex: 0 0 315px;
   }
 
   .project-video {
